@@ -8,10 +8,20 @@
         <script type="text/javascript" src="../js/compiled/dice.js"></script>
         <script type="text/javascript" src="../js/compiled/disposition.js"></script>
         <script type="text/coffeescript">
-        disposition.initialize()
+            $ ->
+                disposition.initialize
+                    jobsCount: '.open-jobs .jobs-count'
+                    jobsList: '.open-jobs .list'
+                    createJob: '.open-jobs .create'
         </script>
     </head>
     <body>
         <h1>Hello, Dis</h1>
+        <div class="open-jobs">
+            <div class="jobs-count">No current jobs</div>
+            <div><a href="#" class="create">Create new job</a></div>
+            <ul class="list">
+            </ul>
+        </div>
     </body>
 </html>
